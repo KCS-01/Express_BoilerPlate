@@ -6,11 +6,11 @@ import cors from "cors";
 
 const middlewares = [
 	logger,
-	router,
 	cookieParser(),
-	cors({ origin: true, credentials: true }),
 	express.json(), // 옵션 설정
-	express.urlencoded() // 옵션 설정
+	express.urlencoded(), // 옵션 설정
+	cors({ origin: true, credentials: true }),
+	router
 ];
 
 export default middlewares;
